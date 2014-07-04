@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--csm-p3-tunner configuration-->
+<config_definition>
+	<public>
+		<entry key="case_number" value="1" />
+		<entry key="non" value="0" />
+	</public>
+
+	<schedule>
+		<entry key="job_scheduler" value="other" />
+		<!--bsub, slurm, pbs, yhrun, other-->
+		<entry key="machine_hosts" value="mpd.hosts" />
+		<entry key="ntasks_per_node" value="10" />
+		<entry key="process_per_case" value="30" />
+	</schedule>
+
+</config_definition>
