@@ -13,6 +13,8 @@ class bookscanner:
             if child.nodeType == Node.ELEMENT_NODE \
             and child.tagName == "book" :
                 bookid = child.getAttribute("id")
+                print "zhangtao"
+                print child.nodeType
                 print "*"*20
                 print "Book id : " , bookid
                 self.handle_book(child)

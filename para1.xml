@@ -8,7 +8,6 @@
 
 	<schedule>
 		<entry key="job_scheduler" value="other" />
-		<!--bsub, slurm, pbs, yhrun, other-->
 		<entry key="machine_hosts" value="mpd.hosts" />
 		<entry key="ntasks_per_node" value="10" />
 		<entry key="process_per_case" value="30" />
