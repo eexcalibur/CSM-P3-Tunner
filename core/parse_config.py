@@ -23,27 +23,27 @@ class CSM_P3_XML(object):
 		for child in node.getElementsByTagName("entry") :
 			key=child.getAttribute("key")
 			if (key == "case_number"):
-				case_number=child.getAttribute("value")
-				print "case_number: ", case_number
+				commpara.case_number=child.getAttribute("value")
+				print "case_number: ", commpara.case_number
 			elif (key == "non"):
-				non=child.getAttribute("value")
-				print "non: ", non
+				commpara.non=child.getAttribute("value")
+				print "non: ", commpara.non
 
 	def handle_schedule(self, node):
 		for child in node.getElementsByTagName("entry"):
 			 key=child.getAttribute("key")
 			 if (key == "job_scheduler"):
-			 	job_scheduler=child.getAttribute("value")
-			 	print "job_scheduler: ", job_scheduler
+			 	commpara.job_scheduler=child.getAttribute("value")
+			 	print "job_scheduler: ", commpara.job_scheduler
 			 elif (key == "machine_hosts"):
-			 	machine_hosts=child.getAttribute("value")
-			 	print "machine_hosts: ", machine_hosts
+			 	commpara.machine_hosts=child.getAttribute("value")
+			 	print "machine_hosts: ", commpara.machine_hosts
 			 elif (key == "ntasks_per_node"):
-			 	ntasks_per_node=child.getAttribute("value")
-			 	print "ntasks_per_node: ", ntasks_per_node
+			 	commpara.ntasks_per_node=child.getAttribute("value")
+			 	print "ntasks_per_node: ", commpara.ntasks_per_node
 			 elif (key == "process_per_case"):
-			 	process_per_case=child.getAttribute("value")
-			 	print "process_per_case: ", process_per_case
+			 	commpara.process_per_case=child.getAttribute("value")
+			 	print "process_per_case: ", commpara.process_per_case
 
 
 doc = minidom.parse("../csm-p3.xml")
