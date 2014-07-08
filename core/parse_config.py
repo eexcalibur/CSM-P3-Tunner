@@ -23,11 +23,14 @@ class CSM_P3_XML(object):
 		for child in node.getElementsByTagName("entry") :
 			key=child.getAttribute("key")
 			if (key == "case_number"):
-				commpara.case_number=child.getAttribute("value")
+				commpara.case_number=int(child.getAttribute("value"))
 				print "case_number: ", commpara.case_number
 			elif (key == "non"):
 				commpara.non=child.getAttribute("value")
 				print "non: ", commpara.non
+			elif (key == "cases_root"):
+				commpara.cases_root=child.getAttribute("value")
+				print "cases_root: ", commpara.cases_root
 
 	def handle_schedule(self, node):
 		for child in node.getElementsByTagName("entry"):
@@ -39,10 +42,10 @@ class CSM_P3_XML(object):
 			 	commpara.machine_hosts=child.getAttribute("value")
 			 	print "machine_hosts: ", commpara.machine_hosts
 			 elif (key == "ntasks_per_node"):
-			 	commpara.ntasks_per_node=child.getAttribute("value")
+			 	commpara.ntasks_per_node=int(child.getAttribute("value"))
 			 	print "ntasks_per_node: ", commpara.ntasks_per_node
 			 elif (key == "process_per_case"):
-			 	commpara.process_per_case=child.getAttribute("value")
+			 	commpara.process_per_case=int(child.getAttribute("value"))
 			 	print "process_per_case: ", commpara.process_per_case
 
 

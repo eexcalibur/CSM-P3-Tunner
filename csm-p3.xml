@@ -2,8 +2,10 @@
 <!--csm-p3-tunner configuration-->
 <config_definition>
 	<public>
-		<entry key="case_number" value="5" />
+		<entry key="case_number" value="20" />
 		<entry key="non" value="0" />
+		<!--sub-dir is case1, case2,...-->
+		<entry key="cases_root" value="/home/zhangtao/UQ/gamil/" /> 
 	</public>
 
 	<schedule>
