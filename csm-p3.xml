@@ -8,6 +8,11 @@
 		<entry key="cases_root" value="/home/zhangtao/UQ/gamil/" /> 
 	</public>
 
+	<preparation>
+		<entry key="preparation_method" value="sampling" />
+		<entry key="preparation_config" value="psuade.in" />
+	</preparation>
+
 	<schedule>
 		<entry key="job_scheduler" value="other" />
 		<entry key="machine_hosts" value="mpd.hosts" />

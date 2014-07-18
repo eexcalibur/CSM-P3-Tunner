@@ -1,7 +1,12 @@
 
+#public
+case_number = 1
+
+#preparation module
+preparation_method="sampling"
+preparation_config="psuade.in"
 
 #scheduler module
-case_number = 1
 non=0
 job_scheduler="other"
 machine_hosts="mpd.hosts"

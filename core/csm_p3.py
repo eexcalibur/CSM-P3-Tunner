@@ -7,6 +7,8 @@ author: zhangtao slnazhangtao@gmail.com
 from xml.dom import minidom , Node
 import commpara
 import parse_config
+import sys
+import os
 
 #parse csm-p3 configure xml file
 doc = minidom.parse("../csm-p3.xml")
@@ -17,6 +19,7 @@ for child in doc.childNodes:
 		parse_config.CSM_P3_XML(child)
 
 
+sys.exit()
 #handle scheduler
 print commpara.job_scheduler
 
@@ -53,7 +56,7 @@ if (commpara.job_scheduler == "other"):
 			elif(counter == hosts_per_case):
 				break
 	 	print hosts_group
- 
+		 
 
 
 

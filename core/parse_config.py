@@ -17,6 +17,8 @@ class CSM_P3_XML(object):
 			if child.nodeType == Node.ELEMENT_NODE and child.tagName == "schedule" :
 				#print "schedule"
 				self.handle_schedule(child)
+			if child.nodeType == Node.ELEMENT_NODE and child.tagName == "preparation" :
+				self.handle_preparation(child)
 
 	def handle_public(self, node):
 		#for child in node.childNodes:
@@ -48,6 +50,15 @@ class CSM_P3_XML(object):
 			 	commpara.process_per_case=int(child.getAttribute("value"))
 			 	print "process_per_case: ", commpara.process_per_case
 
+	def handle_preparation(self, node):
+		for child in node.getElementsByTagName("entry"):
+			key=child.getAttribute("key")
+			if (key == "preparation_method"):
+				commpara.preparation_method=child.getAttribute("value")
+				print "preparation_method: ", commpara.preparation_method
+			elif (key == "preparation_config"):
+				commpara.preparation_config=child.getAttribute("value")
+				print "preparation_config: ", commpara.preparation_config
 
 doc = minidom.parse("../csm-p3.xml")
 for child in doc.childNodes:
